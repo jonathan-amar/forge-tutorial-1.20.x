@@ -2,7 +2,6 @@ package net.jonathanamar.tutorialmod.item;
 
 import net.jonathanamar.tutorialmod.TutorialMod;
 import net.jonathanamar.tutorialmod.block.ModBlocks;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -24,6 +23,7 @@ public class ModCreativeModTabs {
 
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
 
+
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
 
@@ -31,6 +31,8 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.NETHER_SAPPHIRE_ORE.get());
                         pOutput.accept(ModBlocks.END_STONE_SAPPHIRE_ORE.get());
+
+                        pOutput.accept(ModBlocks.SOUND_BLOCK.get());
 
                     }))
                     .build());
