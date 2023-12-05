@@ -17,6 +17,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     private static final List<ItemLike> SAPPHIRE_SMELTABLES = List.of(ModItems.RAW_SAPPHIRE.get(),
             ModBlocks.SAPPHIRE_ORE.get(), ModBlocks.NETHER_SAPPHIRE_ORE.get(), ModBlocks.END_STONE_SAPPHIRE_ORE.get(),
             ModBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
+
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -49,10 +50,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     }
 
     private static void oreCooking(RecipeOutput pRecipeOutput, RecipeSerializer<? extends AbstractCookingRecipe> pSerializer, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult, float pExperience, int pCookingTime, String pGroup, String pSuffix) {
-        for(ItemLike itemlike : pIngredients) {
+        for (ItemLike itemlike : pIngredients) {
             SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), pCategory, pResult,
-                    pExperience, pCookingTime, pSerializer)
+                            pExperience, pCookingTime, pSerializer)
                     .group(pGroup).unlockedBy(getHasName(itemlike), has(itemlike))
-                    .save(pRecipeOutput, TutorialMod.MOD_ID+ ":" + (pResult) + pSuffix + "_" + getItemName(itemlike));
+                    .save(pRecipeOutput, TutorialMod.MOD_ID + ":" + (pResult) + pSuffix + "_" + getItemName(itemlike));
         }
+    }
 }
