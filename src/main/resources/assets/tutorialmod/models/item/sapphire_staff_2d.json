@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handleld",
+  "texture": {
+    "layer0": "tutorilamod:item/sapphire_staff"
+  }
+}
